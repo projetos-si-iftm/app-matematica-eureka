@@ -1,7 +1,12 @@
 server:
-  port: 8761
+  port: ${PORT:8761}
 
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+    # ❌ NÃO colocar defaultZone aqui
+  instance:
+    hostname: app-matematica-eureka.herokuapp.com
+    non-secure-port: 80
+    secure-port: 443
